@@ -1,0 +1,21 @@
+<div class="container">
+
+    <h2 class="text-center">All Categories</h2>
+
+    <!--Copy and paste the code from Bootstarp->Components->Cards->(left)Sizing->Using Grid Markup-->
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let category of categories">
+          
+          <div class="card">
+            <img height="150px" src="{{category.categoryImage}}" alt="" class="card-img-top ">
+            <div class="card-body">
+              <h5 class="card-title">{{category.categoryName}}</h5>
+              
+              <a (click)="onButtonClick(category)" class="btn btn-primary btn-block">Select</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+</div>
